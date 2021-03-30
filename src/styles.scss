@@ -1,0 +1,114 @@
+$c-primary: #eee;
+$c-bkg: black;
+$ff-primary: "Noort", "Georgia", "Helvetica Neue", sans-serif;
+$bp-sm: 475px;
+$bp-md: 768px;
+$bp-lg: 1000px;
+$bp-xl: 1200px;
+
+html {
+  background-color: $c-bkg;
+}
+
+body {
+  margin: 0;
+}
+
+::selection {
+  background: #ffff00dd;
+  color: #000;
+}
+
+h1 {
+  color: $c-primary;
+  font-family: $ff-primary;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+  @media (min-width: $bp-sm) {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  @media (min-width: $bp-lg) {
+    font-size: 2.5rem;
+    line-height: 3.1rem;
+  }
+  @media (min-width: $bp-xl) {
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+  }
+}
+
+#manicule {
+  padding: 0 1rem;
+}
+
+a,
+a:visited,
+a:hover {
+  color: $c-primary;
+  text-decoration: none;
+}
+a:hover {
+  font-style: italic;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: center;
+}
+main > h1 {
+  font-feature-settings: "dlig";
+  max-width: 1000px;
+  width: 90%;
+
+  a:hover {
+    padding: 0 7.5px;
+  }
+
+  @media (min-width: $bp-sm) {
+    a:hover {
+      padding: 0 10px;
+    }
+  }
+  @media (min-width: $bp-lg) {
+    a:hover {
+      padding: 0 12.5px;
+    }
+  }
+  @media (min-width: $bp-xl) {
+    a:hover {
+      padding: 0 14px;
+    }
+  }
+}
+
+footer {
+  height: 10vh;
+
+  ul {
+    color: $c-primary;
+    display: flex;
+    flex-direction: row;
+    font-family: $ff-primary;
+    font-variant: small-caps;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: lowercase;
+  }
+  li {
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+  }
+  a:hover {
+    letter-spacing: 0.7px;
+    text-decoration: underline;
+  }
+}
